@@ -1,0 +1,426 @@
+/* ===========================
+   Yasmin Halı Yıkama
+   Modern Responsive CSS
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7fbff;
+    color:#333;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    background:#0b6efd;
+    color:white;
+    padding:18px 0;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo h2{
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d9ecff;
+}
+
+.hero{
+    padding:80px 0;
+    background:linear-gradient(135deg,#0b6efd,#45b3ff);
+    color:white;
+}
+
+.hero-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero-text h2{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:500px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.whatsapp{
+    background:#25D366;
+    color:white;
+}
+
+.phone{
+    background:white;
+    color:#0b6efd;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+section{
+    padding:80px 0;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:45px;
+    color:#0b6efd;
+    font-size:36px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#0b6efd;
+}
+
+.about p,
+.contact p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+}
+
+.contact{
+    background:#eef6ff;
+    text-align:center;
+}
+
+footer{
+    background:#0b6efd;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+header .container{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.hero-text h1{
+    font-size:34px;
+}
+
+.hero-text h2{
+    font-size:22px;
+}
+
+.hero-content{
+    text-align:center;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+}.logo img {
+    height: 70px;
+    width: auto;
+    display: block;
+}/* ===========================
+   Animasyonlar
+=========================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text{
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero-image{
+    animation: fadeUp 1.4s ease forwards;
+}
+
+header{
+    animation: fadeUp .8s ease forwards;
+}
+
+.card{
+    transition: .35s;
+}
+
+.card:hover{
+    transform: translateY(-10px) scale(1.03);
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+.btn{
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px) scale(1.05);
+}/* ===========================
+   Google Harita
+=========================== */
+
+.map{
+    padding:80px 0;
+    background:#ffffff;
+}
+
+.map iframe{
+    width:100%;
+    border:none;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}/* ===========================
+   Sabit WhatsApp Butonu
+=========================== */
+
+.floating-whatsapp{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    background:#25D366;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:32px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    z-index:9999;
+
+    transition:.3s;
+
+}
+
+.floating-whatsapp:hover{
+
+    transform:scale(1.12);
+
+    background:#1ebe5d;
+
+}/* ===========================
+   Neden Biz
+=========================== */
+
+.why-us{
+    background:#eef6ff;
+    padding:80px 0;
+}
+
+.why-us .card{
+    text-align:center;
+}
+
+.why-us h3{
+    font-size:24px;
+    margin-bottom:15px;
+}/* ===========================
+   Hizmet Bölgeleri
+=========================== */
+
+.areas{
+    padding:80px 0;
+    background:#f7fbff;
+}
+
+.areas .card{
+    text-align:center;
+    font-size:22px;
+    font-weight:600;
+}/* ===========================
+   Sabit Telefon Butonu
+=========================== */
+
+.floating-phone{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:105px;
+
+    width:65px;
+
+    height:65px;
+
+    background:#0b6efd;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    z-index:9999;
+
+    transition:.3s;
+
+}
+
+.floating-phone:hover{
+
+    transform:scale(1.12);
+
+    background:#0056d2;
+
+}/* ===========================
+   Sık Sorulan Sorular
+=========================== */
+
+.faq{
+    padding:80px 0;
+    background:#ffffff;
+}
+
+.faq-item{
+    background:#f8fbff;
+    padding:25px;
+    margin-bottom:20px;
+    border-left:5px solid #0b6efd;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.faq-item h3{
+    color:#0b6efd;
+    margin-bottom:10px;
+}
+
+.faq-item p{
+    color:#555;
+    line-height:1.7;
+}
